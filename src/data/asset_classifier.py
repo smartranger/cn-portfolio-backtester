@@ -7,10 +7,10 @@ from .models import AssetConfig, AssetType
 SUPPORTED_ASSET_TYPES: tuple[AssetType, ...] = ("fund", "etf", "money_fund")
 
 DEFAULT_ASSET_MAPPING: dict[str, dict[str, str]] = {
-    "110020": {"name": "沪深300ETF联接A", "asset_type": "fund"},
-    "511090": {"name": "30年国债ETF", "asset_type": "etf"},
-    "159934": {"name": "黄金ETF", "asset_type": "etf"},
-    "710502": {"name": "货币基金", "asset_type": "money_fund"},
+    "110020": {"name": "易方达沪深300ETF联接A", "asset_type": "fund"},
+    "166016": {"name": "中欧纯债债券(LOF)C", "asset_type": "fund"},
+    "000307": {"name": "易方达黄金ETF联接A", "asset_type": "fund"},
+    "710502": {"name": "富安达现金通货币B", "asset_type": "money_fund"},
 }
 
 ETF_PREFIXES = ("159", "510", "511", "512", "513", "515", "516", "517", "518", "588")

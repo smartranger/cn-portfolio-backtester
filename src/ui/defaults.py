@@ -10,10 +10,10 @@ DEFAULT_START_DATE = date(2018, 1, 1)
 DEFAULT_END_DATE = date.today()
 
 DEFAULT_ASSETS = [
-    AssetConfig(code="110020", name="沪深300ETF联接A", asset_type="fund", weight=0.25),
-    AssetConfig(code="511090", name="30年国债ETF", asset_type="etf", weight=0.25),
-    AssetConfig(code="159934", name="黄金ETF", asset_type="etf", weight=0.25),
-    AssetConfig(code="710502", name="货币基金", asset_type="money_fund", weight=0.25),
+    AssetConfig(code="110020", name="易方达沪深300ETF联接A", asset_type="fund", weight=0.25),
+    AssetConfig(code="166016", name="中欧纯债债券(LOF)C", asset_type="fund", weight=0.25),
+    AssetConfig(code="000307", name="易方达黄金ETF联接A", asset_type="fund", weight=0.25),
+    AssetConfig(code="710502", name="富安达现金通货币B", asset_type="money_fund", weight=0.25),
 ]
 
 
