@@ -80,6 +80,8 @@ def initialize_ui_state() -> None:
         st.session_state["start_date_input"] = DEFAULT_START_DATE
     if "end_date_input" not in st.session_state:
         st.session_state["end_date_input"] = DEFAULT_END_DATE
+    if "pending_start_date_input" in st.session_state:
+        st.session_state["start_date_input"] = st.session_state.pop("pending_start_date_input")
 
 
 def clear_backtest_state() -> None:
@@ -258,7 +260,7 @@ def main() -> None:
         if st.button("加载选中配置", use_container_width=True):
             loaded_start_date, loaded_assets = store.load_portfolio_config(selected_config_name)
             st.session_state["asset_rows"] = asset_rows_from_assets(loaded_assets)
-            st.session_state["start_date_input"] = loaded_start_date.date()
+            st.session_state["pending_start_date_input"] = loaded_start_date.date()
             clear_backtest_state()
             st.rerun()
 
